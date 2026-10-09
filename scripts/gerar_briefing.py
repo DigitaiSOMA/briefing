@@ -39,7 +39,7 @@ def pergunta(p):
             img = o.get("imagem") if isinstance(o, dict) else None
             if img:
                 rel = img.split(f"/{slug}/", 1)[-1]
-                btns.append(f'<button type="button" class="opt" data-value="{e(v)}"><img alt="" src="{e(rel)}" loading="lazy"><span>{e(v)}</span></button>')
+                btns.append(f'<button type="button" class="opt" data-value="{e(v)}"><img alt="" src="{e(rel)}"><span>{e(v)}</span></button>')
             else:
                 btns.append(f'<button type="button" class="opt noimg" data-value="{e(v)}"><span>{e(v)}</span></button>')
         data = f'data-name="{pid}"' + (' data-required="1"' if req else "")
